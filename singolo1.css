@@ -220,6 +220,11 @@ a {
     margin-left: -2.5px;
 }
 
+.services__elem-image {
+    width: 59px;
+    height: 59px;
+}
+
 .services__elem__wrapper {
     margin-left: 20.5px;
 }
