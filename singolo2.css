@@ -60,6 +60,11 @@ a {
     width: 940px;
 }
 
+.participant__image {
+    width: 32px;
+    height: 32px;
+}
+
 /* Portfolio */
 
 .portfolio {
@@ -68,5 +73,223 @@ a {
 }
 
 .portfolio__inner {
-    padding-top: 67px;
+    padding-top: 70px;
+    margin-bottom: 19px;
 }
+
+.portfolio__title {
+    color: #666d89;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 17.86px;
+    letter-spacing: -0.15px;
+}
+
+.portfolio__text {
+    margin-top: 27.5px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.001px;
+    margin-bottom: 12.5px;
+}
+
+.portfolio__navigation {
+    display: flex;
+    margin-left: 1px;
+}
+
+.portfolio__navigation-item {
+    margin-right: 10px;
+    line-height: 5px;
+}
+
+.portfolio__navigation-button {
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    color: #767e9e;
+    background-color: #2d303a;
+    border: 1px solid #767e9e;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 6px 0 6px;
+    word-spacing: -0.001px;
+    letter-spacing: 0.001px;
+    height: 22px;
+}
+
+.portfolio__navigation-button_active {
+    padding: 0 6px 0 6px;
+    color: #dedede;
+    border: 1px solid #c5c5c5;
+}
+
+/* Portfolio projects */
+
+.portfolio__projects {
+    height: 601px;
+    overflow: hidden;
+    margin-bottom: 67px;
+}
+
+.portfolio__projects-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio__projects-item {
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.portfolio__projects-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.portfolio__projects-item:nth-last-child(-n+4) {
+    margin-bottom: 0;
+}
+
+/* About us */
+
+.aboutUs {
+    margin-top: 68px;
+}
+
+.aboutUs__inner {
+    margin-bottom: 45px;
+}
+
+.aboutUs__title {
+    color: #666d89;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 19.86px;
+    letter-spacing: -0.15px;
+}
+
+.aboutUs__text {
+    font-weight: 300;
+    line-height: 30px;
+    text-align: justify;
+    margin-top: 26px;
+}
+
+/* Participants */
+
+.aboutUs {
+    border-bottom: 6px solid #ffffff;
+}
+
+.aboutUs__participant-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutUs__participant-item {
+    width: 300px;
+}
+
+.aboutUs__participant-item:nth-child(2) {
+    margin-left: -2px;
+}
+
+.participant__photo {
+    width: 300px;
+    height: 300px;
+}
+
+.participant__info {
+    margin-top: 17px;
+    margin-bottom: 24px;
+}
+
+.participant__info-title {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 19px;
+    color: #666d89;
+    letter-spacing: -0.3px;
+    word-spacing: 0.6px;
+}
+
+.participant__info-text {
+    width: 301px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19.5px;
+    text-align: justify;
+    word-spacing: 0.2px;
+    margin-top: 10.64px;
+}
+
+.participant__info-text-fix {
+    letter-spacing: -0.07px;
+}
+
+.participant__socials {
+    margin-left: 1px;
+}
+
+.participant__socials-list {
+    display: flex;
+}
+
+.participant__socials-list-fix {
+    display: flex;
+    margin-left: -1px;
+}
+
+.participant__socials-item {
+    margin-right: 8px;
+}
+
+.participant__socials-link-facebook {
+    background-image: url(assets/images/facebook.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 2px;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+}
+
+.participant__socials-link-google {
+    background-image: url(assets/images/google.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 2px;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+}
+
+.participant__socials-link-twitter {
+    background-image: url(assets/images/twitter.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 2px;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+}
+
+.participant__socials-link-linkedin {
+    background-image: url(assets/images/linkedin.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 2px;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+}
+
