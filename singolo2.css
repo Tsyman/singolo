@@ -125,11 +125,13 @@ a {
     word-spacing: -0.001px;
     letter-spacing: 0.001px;
     height: 22px;
+    transition: .5s;
 }
 
 .portfolio__navigation-button:hover {
       color:#dedede;
       border: 1px solid #c5c5c5;
+      transition: .5s;
 }
 
 .portfolio__navigation-button_active {
@@ -272,6 +274,7 @@ a {
     height: 32px;
     border: 1px solid #666d89;
     border-radius: 50%;
+    transition: .5s;
 }
 
 .participant__socials-link-google {
@@ -284,6 +287,7 @@ a {
     height: 32px;
     border: 1px solid #666d89;
     border-radius: 50%;
+    transition: .5s;
 }
 
 .participant__socials-link-twitter {
@@ -296,6 +300,7 @@ a {
     height: 32px;
     border: 1px solid #666d89;
     border-radius: 50%;
+    transition: .5s;
 }
 
 .participant__socials-link-linkedin {
@@ -308,28 +313,33 @@ a {
     height: 32px;
     border: 1px solid #666d89;
     border-radius: 50%;
+    transition: .5s;
 }
 
 .participant__socials-link-facebook:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
+    transition: .5s;
 }
 
 .participant__socials-link-google:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
+    transition: .5s;
 }
 
 .participant__socials-link-twitter:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
+    transition: .5s;
 }
 
 .participant__socials-link-linkedin:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
+    transition: .5s;
 }
