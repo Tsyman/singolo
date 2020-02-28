@@ -218,7 +218,7 @@ a {
 }
 
 .services-elem:nth-child(3n+2) {
-    margin-left: -2.5px;
+    margin-left: -1.5px;
 }
 
 .services-elem-image {

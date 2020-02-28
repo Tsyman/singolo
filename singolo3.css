@@ -178,7 +178,7 @@ textarea::-ms-input-placeholder {
     line-height: 21.5px;
     text-align: justify;
     color: #f0d8d9;
-    letter-spacing: -0.01px;
+    letter-spacing: -0.009px;
 }
 
 .contacts__links {
@@ -215,52 +215,7 @@ textarea::-ms-input-placeholder {
     background-position: 0px center;
     background-repeat: no-repeat;
 }
-/*
-.contacts__links-text {
-    font-weight: 400;
-    color: #f0d8d9;
-}
 
-.contacts__links-text-location {
-    margin-left: -2px;
-}
-
-.contacts__links-text-phone {
-    margin-left: -3px;
-}
-
-.contacts__links-text-mail {
-    margin-left: -5px;
-}
-
-.contacts__links-item {
-    display: flex;
-    align-items: center;
-    width: 300px;
-    height: 43px;
-    margin-bottom: -22px;
-}
-
-.contacts__links-item-image {
-    margin-right: 15px;
-}
-
-.contacts__links-item-location {
-    width: 7px;
-    height: 12px;
-    margin-left: 3px;
-}
-
-.contacts__links-item-phone {
-    width: 11px;
-    height: 12px;
-}
-
-.contacts__links-item-mail {
-    width: 13px;
-    height: 8px;
-}
-*/
 /* Footer */
 
 .footer {
