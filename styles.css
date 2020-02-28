@@ -120,6 +120,10 @@ a {
     letter-spacing: -0.2px;
 }
 
+.navigation-link_active {
+    color: #f06c64;
+}
+
 .navigation-link:hover {
     color: #f06c64;
 }
