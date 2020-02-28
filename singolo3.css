@@ -33,7 +33,7 @@ body {
     margin: 0;
     width: 100%;
     min-width: 1020px;
-    font-size: 18px;
+    font-size: 12px;
     font-family: "Lato", "Arial", sans-serif;
     color: #767e9e;
     background-color: #f2f2f2;
@@ -72,7 +72,7 @@ a {
     padding-top: 69px;
 }
 
-.quote__title {
+.quote-title {
     color: #f0d8d9;
     font-size: 30px;
     font-weight: 900;
@@ -80,7 +80,8 @@ a {
     letter-spacing: -0.05px;
 }
 
-.quote__text {
+.quote-text {
+    font-size: 18px;
     color: #f0d8d9;
     margin-top: 28px;
     font-weight: 300;
@@ -107,15 +108,15 @@ a {
     margin-top: 43px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 }
 
 .form__input,
 .form__textarea,
 .form__button {
+    font-size: 12px;
     color: #f48c8f;
     background-color: #d6564f;
-    font-size: 12px;
     line-height: 18px;
     border-width: 0px;
     border-radius: 5px;
@@ -126,12 +127,14 @@ a {
 }
 
 .form__textarea {
+    font-size: 12px;
     resize: none;
     height: 202px;
     margin-bottom: 18px;
 }
 
 .form__button {
+    font-size: 12px;
     cursor: pointer;
     margin-bottom: 0;
     transition: .3s;
@@ -168,13 +171,13 @@ textarea::-ms-input-placeholder {
 }
 
 .contacts__info-title {
+    font-size: 18px;
     font-weight: 900;
     line-height: 17.86px;
     color: #f0d8d9;
 }
 
 .contacts__info-text {
-    font-size: 12px;
     font-weight: 400;
     line-height: 22.9px;
     text-align: justify;
@@ -188,7 +191,6 @@ textarea::-ms-input-placeholder {
 }
 
 .contacts__links-text {
-    font-size: 12px;
     font-weight: 400;
     color: #f0d8d9;
 }
@@ -248,7 +250,7 @@ textarea::-ms-input-placeholder {
 
 .footer__copyright {
     margin-left: 2px;
-    margin-bottom: 3px;
+    margin-bottom: -3px;
 }
 
 .footer__socials {
