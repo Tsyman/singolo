@@ -39,6 +39,16 @@ body {
     background-color: #f2f2f2;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 a {
     font: inherit;
     color: inherit;
@@ -75,7 +85,7 @@ a {
     letter-spacing: 0.2px;
 }
 
-.logo__star {
+.logo-star {
     color: #f06c64;
 }
 
@@ -85,7 +95,7 @@ a {
     margin-left: auto;
 }
 
-.navigation__list {
+.navigation-list {
     display: inline-flex;
     margin: 0;
     margin-top: 13px;
@@ -156,13 +166,13 @@ a {
     position: relative;
 }
 
-.slider__iphone-vertical {
+.slider-iphone-vertical {
     position: absolute;
     top: -542.5px;
     left: 70px;
 }
 
-.slider__iphone-horizontal {
+.slider-iphone-horizontal {
     position: absolute;
     top: -422px;
     right: 71px;
@@ -179,7 +189,7 @@ a {
     margin-bottom: 69px
 }
 
-.services__title {
+.services-title {
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 18px; 
@@ -188,7 +198,7 @@ a {
     letter-spacing: -0.2px;
 }
 
-.services__text {
+.services-text {
     font-size: 18px;
     font-weight: 300;
     line-height: 30px;
@@ -197,7 +207,7 @@ a {
     margin-bottom: 47px;
 }
 
-.services__list {
+.services-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -207,29 +217,29 @@ a {
     margin-left: 1px;
 }
 
-.services__elem {
+.services-elem {
     margin-bottom: 35px;
     display: flex;
 }
 
-.services__elem:nth-last-child(-n+3) {
+.services-elem:nth-last-child(-n+3) {
     margin: 0;
 }
 
-.services__elem:nth-child(3n+2) {
+.services-elem:nth-child(3n+2) {
     margin-left: -2.5px;
 }
 
-.services__elem-image {
+.services-elem-image {
     width: 59px;
     height: 59px;
 }
 
-.services__elem__wrapper {
+.services-elem__wrapper {
     margin-left: 20.5px;
 }
 
-.services__elem-title {
+.services-elem-title {
     color: #666d89;
     font-size: 18px;
     font-weight: 900;
@@ -239,7 +249,7 @@ a {
     letter-spacing: -0.1px
 }
 
-.services__elem-text {
+.services-elem-text {
     width: 220px;
     font-size: 12px;
     font-weight: 400;
@@ -247,5 +257,6 @@ a {
     margin: 0;
     letter-spacing: 0px;
     text-align: justify;
+    overflow: hidden;
 }
 
