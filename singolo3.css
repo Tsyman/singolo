@@ -90,7 +90,7 @@ a {
 
 }
 
-.quote__text-fix {
+.quote__text_fix {
     letter-spacing: 0.001px;
     line-height: 33px;
 }
@@ -166,10 +166,6 @@ textarea::-ms-input-placeholder {
     width: 301px;
 }
 
-.contacts__info {
-    margin-bottom: -1px;
-}
-
 .contacts__info-title {
     font-size: 18px;
     font-weight: 900;
@@ -179,17 +175,47 @@ textarea::-ms-input-placeholder {
 
 .contacts__info-text {
     font-weight: 400;
-    line-height: 22.9px;
+    line-height: 21.5px;
     text-align: justify;
     color: #f0d8d9;
-    margin-top: 9px;
     letter-spacing: -0.01px;
 }
 
 .contacts__links {
     margin-left: 1px;
+    display: flex;
+    flex-direction: column;
 }
 
+.contacts a {
+    font-weight: 400;
+    line-height: 22.56px;
+    color: #f0d8d9;
+    padding-left: 23px;
+}
+
+.contacts .links-location {
+    margin-top: 9px;
+}
+
+.links-location {
+    background-image: url(assets/images/contacts/location.svg);
+    background-position: 3px center;
+    background-repeat: no-repeat;
+}
+
+.links-phone {
+    background-image: url(assets/images/contacts/phone.svg);
+    background-position: 0px center;
+    background-repeat: no-repeat;
+}
+
+.links-mail {
+    background-image: url(assets/images/contacts/mail.svg);
+    background-position: 0px center;
+    background-repeat: no-repeat;
+}
+/*
 .contacts__links-text {
     font-weight: 400;
     color: #f0d8d9;
@@ -234,7 +260,7 @@ textarea::-ms-input-placeholder {
     width: 13px;
     height: 8px;
 }
-
+*/
 /* Footer */
 
 .footer {
