@@ -76,8 +76,8 @@ a {
     color: #f0d8d9;
     font-size: 30px;
     font-weight: 900;
-    line-height: 17.86px;
-    letter-spacing: -0.05px;
+    line-height: 17px;
+    letter-spacing: -0.1px;
 }
 
 .quote-text {
@@ -86,9 +86,7 @@ a {
     margin-top: 28px;
     font-weight: 300;
     line-height: 28px;
-    letter-spacing: 0.15px;
     text-align: justify;
-
 }
 
 .quote__text_fix {
@@ -103,6 +101,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     width: 619px;
+    height: 418px;
 }
 
 .quote__form {
@@ -140,7 +139,6 @@ a {
     font-size: 12px;
     resize: none;
     height: 202px;
-    margin-bottom: 18px;
 }
 
 .form__button {
@@ -180,16 +178,16 @@ textarea::-ms-input-placeholder {
 .contacts__info-title {
     font-size: 18px;
     font-weight: 900;
-    line-height: 17.86px;
+    line-height: 16px;
     color: #f0d8d9;
 }
 
 .contacts__info-text {
     font-weight: 400;
-    line-height: 21.5px;
+    line-height: 21px;
     text-align: justify;
     color: #f0d8d9;
-    letter-spacing: -0.009px;
+    letter-spacing: -0.02px;
 }
 
 .contacts__links {
@@ -200,7 +198,7 @@ textarea::-ms-input-placeholder {
 
 .contacts a {
     font-weight: 400;
-    line-height: 22.56px;
+    line-height: 23px;
     color: #f0d8d9;
     padding-left: 23px;
 }
@@ -247,7 +245,7 @@ textarea::-ms-input-placeholder {
 
 .copyright {
     margin-bottom: 16px;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.1px;
     color: #666d89;
 }
 
@@ -343,4 +341,3 @@ textarea::-ms-input-placeholder {
     transform: scale(1.2);
     transition: .5s;
 }
-

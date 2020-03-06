@@ -186,7 +186,7 @@ a {
 
 .services__inner {
     margin-top: 59px;
-    margin-bottom: 69px
+    margin-bottom: 63px;
 }
 
 .services-title {
@@ -239,8 +239,8 @@ a {
     color: #666d89;
     font-size: 18px;
     font-weight: 900;
-    line-height: 17.5px;
-    margin-bottom: 11.6px;
+    line-height: 17px;
+    margin-bottom: 11px;
     letter-spacing: -0.1px
 }
 
@@ -248,9 +248,8 @@ a {
     width: 220px;
     max-height: 60px;
     font-weight: 400;
-    line-height: 20.5px;
+    line-height: 21px;
     margin: 0;
     text-align: justify;
     overflow: hidden;
 }
-

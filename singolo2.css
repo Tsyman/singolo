@@ -68,7 +68,7 @@ a {
 }
 
 .portfolio__inner {
-    padding-top: 70px;
+    padding-top: 71px;
     margin-bottom: 19px;
 }
 
@@ -76,17 +76,16 @@ a {
     color: #666d89;
     font-size: 30px;
     font-weight: 900;
-    line-height: 17.86px;
-    letter-spacing: -0.15px;
+    line-height: 17px;
 }
 
 .portfolio-text {
     font-size: 18px;
-    margin-top: 27.5px;
+    margin-top: 26px;
     font-weight: 300;
     line-height: 28px;
-    letter-spacing: 0.001px;
-    margin-bottom: 12.5px;
+    margin-bottom: 13px;
+    text-align: justify;
 }
 
 .portfolio__navigation {
@@ -181,8 +180,8 @@ a {
     color: #666d89;
     font-size: 30px;
     font-weight: 900;
-    line-height: 19.86px;
-    letter-spacing: -0.15px;
+    line-height: 19px;
+    letter-spacing: -0.1px;
 }
 
 .aboutUs-text {
@@ -194,6 +193,10 @@ a {
 }
 
 /* Participants */
+
+.participants {
+    margin-bottom: 67px;
+}
 
 .participants-list {
     display: flex;
@@ -222,8 +225,7 @@ a {
     font-weight: 900;
     line-height: 19px;
     color: #666d89;
-    letter-spacing: -0.3px;
-    word-spacing: 0.6px;
+    word-spacing: -1px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -232,10 +234,10 @@ a {
 .info-text {
     width: 301px;
     font-weight: 400;
-    line-height: 19.5px;
+    line-height: 20px;
     text-align: justify;
     word-spacing: 0.2px;
-    margin-top: 10.64px;
+    margin-top: 10px;
 }
 
 .info-text_fix {
@@ -265,7 +267,7 @@ a {
     background-image: url(assets/images/aboutUs/facebook.svg);
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 2px;
+    margin-top: 1px;
     display: flex;
     width: 32px;
     height: 32px;
@@ -278,7 +280,7 @@ a {
     background-image: url(assets/images/aboutUs/google.svg);
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 2px;
+    margin-top: 1px;
     display: flex;
     width: 32px;
     height: 32px;
@@ -291,7 +293,7 @@ a {
     background-image: url(assets/images/aboutUs/twitter.svg);
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 2px;
+    margin-top: 1px;
     display: flex;
     width: 32px;
     height: 32px;
@@ -304,7 +306,7 @@ a {
     background-image: url(assets/images/aboutUs/linkedin.svg);
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 2px;
+    margin-top: 1px;
     display: flex;
     width: 32px;
     height: 32px;
