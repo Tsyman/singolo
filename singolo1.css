@@ -159,6 +159,7 @@ a {
 .slider-prev:hover,
 .slider-next:hover {
     cursor: pointer;
+    opacity: 0.6;
 }
 
 .slider__iphone {
