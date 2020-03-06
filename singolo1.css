@@ -246,6 +246,7 @@ a {
 
 .services-elem-text {
     width: 220px;
+    max-height: 60px;
     font-weight: 400;
     line-height: 20.5px;
     margin: 0;

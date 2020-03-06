@@ -246,6 +246,7 @@ a {
 
 .services-elem-text {
     width: 220px;
+    max-height: 60px;
     font-weight: 400;
     line-height: 20.5px;
     margin: 0;
@@ -564,7 +565,7 @@ a {
     font-weight: 300;
     line-height: 28px;
     letter-spacing: 0.15px;
-
+    text-align: justify;
 }
 
 .quote__text_fix {
@@ -592,7 +593,7 @@ a {
 .form__textarea,
 .form__button {
     font-size: 12px;
-    color: #f48c8f;
+    color: #f0d8d9;
     background-color: #d6564f;
     line-height: 18px;
     border-width: 0px;
@@ -601,6 +602,15 @@ a {
     margin-bottom: 18px;
     font-family: inherit;
     font-weight: 400;
+}
+
+::placeholder {
+    color: #f48c8f;
+    opacity: 1;
+  }
+
+.form__input:focus:invalid {
+    filter: contrast(200%);
 }
 
 .form__textarea {
@@ -616,6 +626,7 @@ a {
     margin-bottom: 0;
     transition: .3s;
     outline: none;
+    color: #f48c8f;
 }
 
 .form__button:hover {
@@ -711,9 +722,15 @@ textarea::-ms-input-placeholder {
     margin-bottom: -3px;
 }
 
+.copyright {
+    margin-bottom: 16px;
+    letter-spacing: -0.2px;
+    color: #666d89;
+}
+
 .footer__socials {
     margin-right: -8px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }
 
 .footer__socials-list {
