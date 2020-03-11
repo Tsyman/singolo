@@ -1001,7 +1001,7 @@ textarea::-ms-input-placeholder {
 
 .popup {
     position: fixed;
-    z-index: 99;
+    z-index: 10;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -1057,7 +1057,7 @@ textarea::-ms-input-placeholder {
 
 .popup__content {
     position: relative;
-    z-index: 999;
+    z-index: 100;
     background-color: #fefefe;
     margin: auto;
     padding: 0;

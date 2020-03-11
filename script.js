@@ -98,6 +98,7 @@ function tabs() {
 
 for (elem of projectsImages) {
     elem.addEventListener("click", border);
+    elem.addEventListener("dblclick", borderOff);
 }
 
 function border() {
@@ -105,6 +106,13 @@ function border() {
         elem.classList.remove("bordered");
     }
     this.classList.toggle("bordered");
+}
+
+function borderOff(event) {
+    target = event.target;
+    if (target.classList.contains("bordered")) {
+        target.classList.remove("bordered");
+    }
 }
 
 /* Popup Message */
@@ -119,6 +127,7 @@ let form = document.querySelector(".form"),
     inputSubject = document.querySelector(".subject"), textarea = document.querySelector(".form__textarea"),
     popupSubjectResult = document.querySelector(".subject-result"),
     popupDescriptionResult = document.querySelector(".description-result");
+    
 popupToggle.addEventListener("click", openPopup);
 popupCLose.addEventListener("click", closePopup);
 closeButton.addEventListener("click", closePopup);
