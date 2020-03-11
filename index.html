@@ -303,12 +303,27 @@
                 </div>
                 <div class="quote__form">
                     <form action="#" method="post" class="form">
-                        <input class="form__input" type="text" name="Name" placeholder="Name (Required)" required="">
-                        <input class="form__input" type="email" name="Email" placeholder="Email (Required)" required="">
-                        <input class="form__input" type="text" name="Subject" placeholder="Subject">
+                        <input class="form__input name" type="text" name="Name" placeholder="Name (Required)" required="">
+                        <input class="form__input email" type="email" name="Email" placeholder="Email (Required)" required="">
+                        <input class="form__input subject" type="text" name="Subject" placeholder="Subject">
                         <textarea class="form__textarea" name="Description" placeholder="Describe your project in detail..."></textarea>
                         <button class="form__button" type="submit">Submit</button>
                     </form>
+                    <div class="popup disabled">
+                        <div class="popup__content">
+                            <div class="popup__header">
+                                <p>Письмо отправлено</p>
+                                <span class="popup_close">&times;</span>
+                            </div>
+                            <div class="popup__body">
+                                <p class="subject-result">Tema: </p>
+                                <p class="description-result">Описание: </p>
+                            </div>
+                            <div class="popup__footer">
+                                <button class="close-button">Ок</button>
+                            </div> 
+                        </div>
+                    </div>
                     <div class="contacts" id="Contacts">
                         <div class="contacts__info">
                             <h3 class="contacts__info-title">Contact Information</h3>

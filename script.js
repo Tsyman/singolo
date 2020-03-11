@@ -106,3 +106,109 @@ function border() {
     }
     this.classList.toggle("bordered");
 }
+
+/* Popup Message */
+
+let form = document.querySelector(".form")
+let popup = document.querySelector(".popup");
+let closeButton = document.querySelector(".close-button");
+let popupCLose = document.querySelector(".popup_close");
+let popupToggle = document.querySelector(".form__button");
+let inputEmail = document.querySelector(".email");
+let inputName = document.querySelector(".name");
+let inputSubject = document.querySelector(".subject");
+let textarea = document.querySelector(".form__textarea");
+let popupSubjectResult = document.querySelector(".subject-result");
+let popupDescriptionResult = document.querySelector(".description-result");
+popupToggle.addEventListener("click", openPopup);
+popupCLose.addEventListener("click", closePopup);
+closeButton.addEventListener("click", closePopup);
+
+let generateError = function (text) {
+    let error = document.createElement("div")
+    error.className = "error";
+    error.style.color = "red";
+    error.style.fontSize = "18px"
+    error.style.backgroundColor = "rgb(230, 230, 250)"
+    error.style.width = "170px"
+    error.style.borderRadius = "5px"
+    error.innerHTML = text;
+    return error;
+}
+
+let removeValidation = function () {
+    let errors = form.querySelectorAll(".error")
+  
+    for (let i = 0; i < errors.length; i++) {
+      errors[i].remove()
+    }
+}
+
+let checkName = function () {
+    if (!inputName.value) {
+        let error = generateError("Field cannot be blank");
+        inputName.parentElement.insertBefore(error, inputName);
+        return false;
+    }
+    else if (checkNameMatch(inputName.value) == false) {
+        let error = generateError("Name doesn't match");
+        inputName.parentElement.insertBefore(error, inputName);
+        return false;
+    }
+    return true;
+}
+
+let checkEmailMatch = function () {
+    if (!inputEmail.value) {
+        let error = generateError("Field cannot be blank");
+        inputEmail.parentElement.insertBefore(error, inputEmail);
+        return false;
+    }
+    else if (validateEmail(inputEmail.value) == false) {
+        let error = generateError("Email doesn't match");
+        inputEmail.parentElement.insertBefore(error, inputEmail);
+        return false;
+    }
+    return true;
+}
+
+let checkNameMatch = function (name) {
+    let res =  /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/u;
+    return res.test(name);
+}
+
+function validateEmail(email) {
+    let res = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return res.test(email);
+}
+
+function openPopup(event) {
+
+    event.preventDefault();
+
+    removeValidation();
+
+    if (checkName() && checkEmailMatch()) {
+        if (!inputSubject.value) {
+            popupSubjectResult.innerHTML = "Без темы";
+             if (!textarea.value) {
+            popupDescriptionResult.innerHTML = "Без описания";
+            }
+        }
+        else {
+            popupSubjectResult.innerHTML = "Тема: ";
+            popupDescriptionResult.innerHTML = "Описание: "
+            popupSubjectResult.innerHTML += inputSubject.value;
+            popupDescriptionResult.innerHTML += textarea.value;
+        }
+        popup.classList.remove("disabled");
+    }
+}  
+
+function closePopup() {
+    popup.classList.add("disabled");
+}
+
+
+    
+    
