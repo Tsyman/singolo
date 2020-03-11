@@ -58,8 +58,8 @@ function screenOff() {
 /* Portfolio Tabs */
 
 let portfolioLink = document.querySelectorAll(".portfolio__navigation-button");
-let portfolioImages = document.querySelectorAll(".projects-item img");
-console.log(portfolioImages);
+let projectsImages = document.querySelectorAll(".projects-item img");
+
 for (let elem of portfolioLink) {
     elem.addEventListener("click", tabs);
 }
@@ -83,21 +83,26 @@ function tabs() {
     }
     this.classList.toggle("portfolio__navigation-button_active");
 
+    for (let elem of projectsImages) {
+        elem.classList.remove("bordered");
+    }
+
     let randNumb = shuffle([1,2,3,4,5,6,7,8,9,10,11,12]);
     let length = randNumb.length;
     for (let i = 0; i < length; i++) {  
-        portfolioImages[i].src = `assets/images/projects/image-${randNumb[i]}.png`;          
+        projectsImages[i].src = `assets/images/projects/image-${randNumb[i]}.png`;          
     }         
 }
 
+/* Projects images */
 
-/* Portfolio images */
-
-for (elem of portfolioImages) {
+for (elem of projectsImages) {
     elem.addEventListener("click", border);
 }
 
-function border(event) {
-    target = event.target;
-    
+function border() {
+    for (let elem of projectsImages) {
+        elem.classList.remove("bordered");
+    }
+    this.classList.toggle("bordered");
 }

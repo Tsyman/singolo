@@ -474,9 +474,10 @@ a {
 /* Portfolio projects */
 
 .projects {
-    height: 601px;
+    height: 611px;
     overflow: hidden;
-    margin-bottom: 67px;
+    margin-bottom: 57px;
+    margin-right: -15px;
 }
 
 .projects-list {
@@ -485,8 +486,14 @@ a {
 }
 
 .projects-item {
-    margin-right: 20px;
+    margin-right: 15px;
     margin-bottom: 17px;
+    width: 225px;
+    height: 190px;
+}
+
+.bordered {
+    border: 5px solid #F06C64;
 }
 
 .projects-item:nth-child(4n) {
