@@ -13,11 +13,11 @@ function navColor() {
 
 /* Slides */
 
-let slideBackground = document.querySelector(".slider");
-let slideFirst = document.querySelector(".slider__iphone-slide1");
-let slideSecond = document.querySelector(".slider__iphone-slide2");
-let sliderNext = document.querySelector(".slider-next");
-let sliderPrev = document.querySelector(".slider-prev");
+let slideBackground = document.querySelector(".slider"),
+    slideFirst = document.querySelector(".slider__iphone-slide1"),
+    slideSecond = document.querySelector(".slider__iphone-slide2"),
+    sliderNext = document.querySelector(".slider-next"),
+    sliderPrev = document.querySelector(".slider-prev");
 
 sliderNext.addEventListener("click", switchSlide);
 sliderPrev.addEventListener("click", switchSlide);
@@ -36,10 +36,10 @@ function switchSlide() {
 
 /* Screen activation */
 
-let firstScreen = document.querySelector(".iphone-slide1-screen_first");
-let secondScreen = document.querySelector(".iphone-slide1-screen_second");
-let thirdScreen = document.querySelector(".iphone-slide2-screen");
-let homeButtons = document.querySelectorAll(".home");
+let firstScreen = document.querySelector(".iphone-slide1-screen_first"),
+     secondScreen = document.querySelector(".iphone-slide1-screen_second"),
+     thirdScreen = document.querySelector(".iphone-slide2-screen"),
+    homeButtons = document.querySelectorAll(".home");
 
 for (let elem of homeButtons) {
     elem.addEventListener("click", screenOff);
@@ -57,8 +57,8 @@ function screenOff() {
 
 /* Portfolio Tabs */
 
-let portfolioLink = document.querySelectorAll(".portfolio__navigation-button");
-let projectsImages = document.querySelectorAll(".projects-item img");
+let portfolioLink = document.querySelectorAll(".portfolio__navigation-button"),
+    projectsImages = document.querySelectorAll(".projects-item img");
 
 for (let elem of portfolioLink) {
     elem.addEventListener("click", tabs);
@@ -109,32 +109,55 @@ function border() {
 
 /* Popup Message */
 
-let form = document.querySelector(".form")
-let popup = document.querySelector(".popup");
-let closeButton = document.querySelector(".close-button");
-let popupCLose = document.querySelector(".popup_close");
-let popupToggle = document.querySelector(".form__button");
-let inputEmail = document.querySelector(".email");
-let inputName = document.querySelector(".name");
-let inputSubject = document.querySelector(".subject");
-let textarea = document.querySelector(".form__textarea");
-let popupSubjectResult = document.querySelector(".subject-result");
-let popupDescriptionResult = document.querySelector(".description-result");
+let form = document.querySelector(".form"),
+    popup = document.querySelector(".popup"),
+    closeButton = document.querySelector(".close-button"),
+    popupCLose = document.querySelector(".popup_close"),
+    popupToggle = document.querySelector(".form__button"),
+    inputEmail = document.querySelector(".email"),
+    inputName = document.querySelector(".name"),
+    inputSubject = document.querySelector(".subject"), textarea = document.querySelector(".form__textarea"),
+    popupSubjectResult = document.querySelector(".subject-result"),
+    popupDescriptionResult = document.querySelector(".description-result");
 popupToggle.addEventListener("click", openPopup);
 popupCLose.addEventListener("click", closePopup);
 closeButton.addEventListener("click", closePopup);
 
+
+function openPopup(event) {
+
+    event.preventDefault();
+
+    removeValidation();
+
+    if (checkName() && checkEmailMatch()) {
+        if (!inputSubject.value) {
+            popupSubjectResult.innerHTML = "Без темы";
+             if (!textarea.value) {
+            popupDescriptionResult.innerHTML = "Без описания";
+            }
+        }
+        else {
+            popupSubjectResult.innerHTML = "Тема: ";
+            popupDescriptionResult.innerHTML = "Описание: "
+            popupSubjectResult.innerHTML += inputSubject.value;
+            popupDescriptionResult.innerHTML += textarea.value;
+        }
+        popup.classList.remove("disabled");
+    }
+}  
+
+function closePopup() {
+    popup.classList.add("disabled");
+}
+
 let generateError = function (text) {
     let error = document.createElement("div")
     error.className = "error";
-    error.style.color = "red";
-    error.style.fontSize = "18px"
-    error.style.backgroundColor = "rgb(230, 230, 250)"
-    error.style.width = "170px"
-    error.style.borderRadius = "5px"
     error.innerHTML = text;
     return error;
 }
+
 
 let removeValidation = function () {
     let errors = form.querySelectorAll(".error")
@@ -182,32 +205,7 @@ function validateEmail(email) {
     return res.test(email);
 }
 
-function openPopup(event) {
 
-    event.preventDefault();
-
-    removeValidation();
-
-    if (checkName() && checkEmailMatch()) {
-        if (!inputSubject.value) {
-            popupSubjectResult.innerHTML = "Без темы";
-             if (!textarea.value) {
-            popupDescriptionResult.innerHTML = "Без описания";
-            }
-        }
-        else {
-            popupSubjectResult.innerHTML = "Тема: ";
-            popupDescriptionResult.innerHTML = "Описание: "
-            popupSubjectResult.innerHTML += inputSubject.value;
-            popupDescriptionResult.innerHTML += textarea.value;
-        }
-        popup.classList.remove("disabled");
-    }
-}  
-
-function closePopup() {
-    popup.classList.add("disabled");
-}
 
 
     
