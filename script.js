@@ -1,5 +1,6 @@
 /* Navigation */
 
+
 let navLink = document.querySelectorAll(".navigation-link");
 for (let elem of navLink) {
     elem.addEventListener("click", navColor);
@@ -8,8 +9,21 @@ function navColor() {
     for (let elem of navLink) {
         elem.classList.remove("active");
     }
-    this.classList.toggle("active"); 
+    this.classList.toggle("active");
 }
+
+/* Fixed Navigation */
+window.onscroll = function() {fixeNav()};
+let navigation = document.querySelector("nav");
+var sticky = navigation.offsetTop;
+
+function fixeNav() {
+    if (window.pageYOffset >= sticky) {
+      navigation.classList.add("navigation_sticky")
+    } else {
+      navigation.classList.remove("navigation_sticky");
+    }
+  }
 
 /* Slides */
 
