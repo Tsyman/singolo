@@ -1,6 +1,5 @@
 /* Navigation */
 
-
 let navLink = document.querySelectorAll(".navigation-link");
 for (let elem of navLink) {
     elem.addEventListener("click", navColor);
@@ -12,18 +11,55 @@ function navColor() {
     this.classList.toggle("active");
 }
 
+/* Switch active navigation link */
+
+let anchor = document.querySelectorAll(".anchor"),
+    anchors = {},
+    i = 0;
+    
+Array.prototype.forEach.call(anchor, function(e) {
+    anchors[e.id] = e.offsetTop - 200;
+});
+    
+anchors.Contacts = 2400;
+
+window.addEventListener("scroll", activeNav);
+
+function activeNav() {
+    let scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+    for (i in anchors) {
+        if (anchors[i] <= scrollPosition) {
+            document.querySelector('.active').classList.remove("active");
+            document.querySelector('a[href*=' + i + ']').classList.add("active");
+        }
+    }
+}
+      
+/* Smooth anchors */
+
+for (let elem of navLink) {
+    elem.addEventListener("click", function smooth(event) {
+        event.preventDefault();
+        const blockId = elem.getAttribute("href");
+        document.querySelector("" + blockId).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
+    })
+}
+
 /* Fixed Navigation */
+
 window.onscroll = function() {fixeNav()};
-let navigation = document.querySelector("nav");
-var sticky = navigation.offsetTop;
+let navigation = document.querySelector("nav"),
+    sticky = navigation.offsetTop;
 
 function fixeNav() {
     if (window.pageYOffset >= sticky) {
-      navigation.classList.add("navigation_sticky")
-    } else {
-      navigation.classList.remove("navigation_sticky");
-    }
-  }
+        navigation.classList.add("navigation_sticky")
+    } else 
+        navigation.classList.remove("navigation_sticky");
+}
 
 /* Slides */
 
@@ -51,8 +87,8 @@ function switchSlide() {
 /* Screen activation */
 
 let firstScreen = document.querySelector(".iphone-slide1-screen_first"),
-     secondScreen = document.querySelector(".iphone-slide1-screen_second"),
-     thirdScreen = document.querySelector(".iphone-slide2-screen"),
+    secondScreen = document.querySelector(".iphone-slide1-screen_second"),
+    thirdScreen = document.querySelector(".iphone-slide2-screen"),
     homeButtons = document.querySelectorAll(".home");
 
 for (let elem of homeButtons) {
@@ -138,7 +174,8 @@ let form = document.querySelector(".form"),
     popupToggle = document.querySelector(".form__button"),
     inputEmail = document.querySelector(".email"),
     inputName = document.querySelector(".name"),
-    inputSubject = document.querySelector(".subject"), textarea = document.querySelector(".form__textarea"),
+    inputSubject = document.querySelector(".subject"), 
+    textarea = document.querySelector(".form__textarea"),
     popupSubjectResult = document.querySelector(".subject-result"),
     popupDescriptionResult = document.querySelector(".description-result");
     
@@ -171,6 +208,10 @@ function openPopup(event) {
 }  
 
 function closePopup() {
+    inputName.value = "";
+    inputEmail.value = "";
+    inputSubject.value = "";
+    textarea.value = "";
     popup.classList.add("disabled");
 }
 
