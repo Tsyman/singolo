@@ -191,27 +191,14 @@ function openPopup(event) {
     removeValidation();
 
     if (checkName() && checkEmailMatch()) {
-        if (!inputSubject.value) {
-            popupSubjectResult.innerHTML = "Без темы";
-             if (!textarea.value) {
-            popupDescriptionResult.innerHTML = "Без описания";
-            }
-        }
-        else {
-            popupSubjectResult.innerHTML = "Тема: ";
-            popupDescriptionResult.innerHTML = "Описание: "
-            popupSubjectResult.innerHTML += inputSubject.value;
-            popupDescriptionResult.innerHTML += textarea.value;
-        }
+        popupSubjectResult.innerHTML = (inputSubject.value) ?  "Тема: " + inputSubject.value : "Без темы";
+        popupDescriptionResult.innerHTML = (textarea.value) ? "Описание: " + textarea.value : "Без описания";
         popup.classList.remove("disabled");
     }
 }  
 
 function closePopup() {
-    inputName.value = "";
-    inputEmail.value = "";
-    inputSubject.value = "";
-    textarea.value = "";
+    form.reset()
     popup.classList.add("disabled");
 }
 

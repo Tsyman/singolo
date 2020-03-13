@@ -134,10 +134,10 @@ a {
     overflow: hidden;  
     top: 0;   
     left: 0;   
-    z-index: 9999;   
+    z-index: 999;   
     width: 100%;   
     height: 50px;
-    background-color: #2d303a;
+    background-color: rgba(45, 48, 58, 0.8);
     text-align: center;
     padding-top: 5px;
     padding-left: 540px;
@@ -1019,7 +1019,7 @@ textarea::-ms-input-placeholder {
 
 .popup {
     position: fixed;
-    z-index: 10;
+    z-index: 1000;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -1031,7 +1031,7 @@ textarea::-ms-input-placeholder {
 }
 
 .popup_close {
-    color: black;
+    color: white;
     font-size: 30px;
     font-weight: bold;
     margin-left: auto;
@@ -1075,15 +1075,16 @@ textarea::-ms-input-placeholder {
 
 .popup__content {
     position: relative;
-    z-index: 100;
+    z-index: 10000;
     background-color: #fefefe;
     margin: auto;
     padding: 0;
-    padding-top: 50px;
-    width: 50%;
+    top: 25%;
+    width: 25%;
     box-shadow: 0 4px 8px 0 rgba(0 , 0, 0, 0.2), 0 6px 20px 0 rgba(0 , 0, 0, 0.19);
     animation-name: animaTop;
     animation-duration: 0.4s;
+    word-wrap: break-word;
 }
 
 @keyframes animaTop {
@@ -1092,7 +1093,7 @@ textarea::-ms-input-placeholder {
         opacity: 0;
     }
     to {
-        top: 0;
+        top: 25%;
         opacity: 1;
     }
 }
