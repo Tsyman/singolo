@@ -178,82 +178,24 @@ let form = document.querySelector(".form"),
     textarea = document.querySelector(".form__textarea"),
     popupSubjectResult = document.querySelector(".subject-result"),
     popupDescriptionResult = document.querySelector(".description-result");
-    
-popupToggle.addEventListener("click", openPopup);
+
 popupCLose.addEventListener("click", closePopup);
 closeButton.addEventListener("click", closePopup);
 
-
-function openPopup(event) {
-
+form.addEventListener('submit',  function(event) {
     event.preventDefault();
-
-    removeValidation();
-
-    if (checkName() && checkEmailMatch()) {
+    if (form.checkValidity()) {
         popupSubjectResult.innerHTML = (inputSubject.value) ?  "Тема: " + inputSubject.value : "Без темы";
         popupDescriptionResult.innerHTML = (textarea.value) ? "Описание: " + textarea.value : "Без описания";
         popup.classList.remove("disabled");
     }
-}  
+    form.reset();
+    return false;
+});
 
 function closePopup() {
     form.reset()
     popup.classList.add("disabled");
-}
-
-let generateError = function (text) {
-    let error = document.createElement("div")
-    error.className = "error";
-    error.innerHTML = text;
-    return error;
-}
-
-
-let removeValidation = function () {
-    let errors = form.querySelectorAll(".error")
-  
-    for (let i = 0; i < errors.length; i++) {
-      errors[i].remove()
-    }
-}
-
-let checkName = function () {
-    if (!inputName.value) {
-        let error = generateError("Field cannot be blank");
-        inputName.parentElement.insertBefore(error, inputName);
-        return false;
-    }
-    else if (checkNameMatch(inputName.value) == false) {
-        let error = generateError("Name doesn't match");
-        inputName.parentElement.insertBefore(error, inputName);
-        return false;
-    }
-    return true;
-}
-
-let checkEmailMatch = function () {
-    if (!inputEmail.value) {
-        let error = generateError("Field cannot be blank");
-        inputEmail.parentElement.insertBefore(error, inputEmail);
-        return false;
-    }
-    else if (validateEmail(inputEmail.value) == false) {
-        let error = generateError("Email doesn't match");
-        inputEmail.parentElement.insertBefore(error, inputEmail);
-        return false;
-    }
-    return true;
-}
-
-let checkNameMatch = function (name) {
-    let res =  /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/u;
-    return res.test(name);
-}
-
-function validateEmail(email) {
-    let res = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return res.test(email);
 }
 
 

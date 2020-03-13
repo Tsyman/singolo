@@ -143,10 +143,6 @@ a {
     padding-left: 540px;
 }
 
-.navigation_sticky + .slider {
-    padding-top: 200px;
-  }
-
 /* Slider */ 
 
 .slider_red {
@@ -1080,11 +1076,12 @@ textarea::-ms-input-placeholder {
     margin: auto;
     padding: 0;
     top: 25%;
-    width: 25%;
+    width: 30%;
     box-shadow: 0 4px 8px 0 rgba(0 , 0, 0, 0.2), 0 6px 20px 0 rgba(0 , 0, 0, 0.19);
     animation-name: animaTop;
     animation-duration: 0.4s;
     word-wrap: break-word;
+    font-size: 16px;
 }
 
 @keyframes animaTop {
