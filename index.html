@@ -1,42 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Singolo</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header anchor" id="Home">
         <div class="container">
             <div class="header__inner">
                 <h1 class="logo">
-                    <a href="#"><span>Singolo</span><span class="logo-star">*</span></a>
+                    <a href="javascript:void(0)"><span>Singolo</span><span class="logo-star">*</span></a>
                 </h1>
                 <nav class="header__navigation">
                     <ul class="navigation-list">
                         <li class="navigation-item">
-                            <a class="navigation-link navigation-link_active" href="#">
+                            <a class="navigation-link active-link" href="#Home">
                                 Home
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="#">
+                            <a class="navigation-link" href="#Services">
                                 Services
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="#">
+                            <a class="navigation-link" href="#Portfolio">
                                 Portfolio
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="#">
+                            <a class="navigation-link" href="#About">
                                 About
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="#">
+                            <a class="navigation-link" href="#Contacts">
                                 Contact 
                             </a>
                         </li>
@@ -46,19 +44,37 @@
         </div>
     </header>
     <main class="main">
-        <section class="slider">  
+        <section class="slider slider_red">  
             <div class="container">
-                <div class="slider__inner">
-                    <img class="slider-prev" src="./assets/images/slider/prev.png" alt="Previous slide">
-                    <img class="slider-next" src="./assets/images/slider/next.png" alt="Next slide">
+                <div class="arrow__inner">
+                    <img class="arrow left" src="./assets/images/slider/prev.png" alt="Previous slide">
+                    <img class="arrow right" src="./assets/images/slider/next.png" alt="Next slide">
                 </div>
-                <div class="slider__iphone">
-                    <img class="slider-iphone-vertical" src="./assets/images/slider/iPhone-Vertical.png" alt="Iphone vertical">
-                    <img class="slider-iphone-horizontal" src="./assets/images/slider/iPhone-Horizontal.png" alt="Iphone horizontal">
+                <div class="slider-item active-item">
+                    <div class="slider__iphone-slide1">
+                        <img src="./assets/images/slider/slide1/Cam.png" class="iphone-slide1-cam_first" alt="Cam">
+                        <img src="./assets/images/slider/slide1/Screen1.png" class="iphone-slide1-screen_first" alt="Screen">
+                        <img src="./assets/images/slider/slide1/Shadow.png" class="iphone-slide1-shadow_first" alt="Shadow">
+                        <img src="./assets/images/slider/slide1/Home.png" class="home iphone-slide1-home_first" alt="Home1">
+                        <img src="./assets/images/slider/slide1/Cam.png" class="iphone-slide1-cam-second" alt="Cam">
+                        <img src="./assets/images/slider/slide1/Screen2.png" class="iphone-slide1-screen_second" alt="Screen">                                      
+                        <img src="./assets/images/slider/slide1/Shadow.png" class="iphone-slide1-shadow_second" alt="Shadow">
+                        <img src="./assets/images/slider/slide1/Home.png" class="home iphone-slide1-home_second" alt="Home2">
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider__iphone-slide2">
+                        <img src="./assets/images/slider/slide2/Cam.png" class="iphone-slide2-cam" alt="Cam">
+                        <img src="./assets/images/slider/slide2/Screen.png" class="iphone-slide2-screen" alt="Screen">
+                        <img src="./assets/images/slider/slide2/Shadow.png" class="iphone-slide2-shadow" alt="Shadow">
+                        <img src="./assets/images/slider/slide2/Home.png" class="home iphone-slide2-home" alt="Home3">
+                        <img src="./assets/images/slider/slide2/Phone.png" class="iphone-slide2-phone_first" alt="Phone">
+                        <img src="./assets/images/slider/slide2/Phone.png" class="iphone-slide2-phone_second" alt="Phone">                                      
+                    </div>
                 </div>
             </div>       
         </section>
-        <section class="services">
+        <section class="services anchor" id="Services">
             <div class="container">
                 <div class="services__inner">
                     <h2 class="services-title">Our Services</h2>
@@ -81,7 +97,7 @@
                             <img class="services-elem-image" src="./assets/images/services/lamp.svg" alt="Lamp">
                             <div class="services-elem__wrapper">
                                 <h3 class="services-elem-title">Inovative Ideas</h3>
-                                <p class="services-elem-text">Quisque luctus, quam eget molestie com&shy;modo, 
+                                <p class="services-elem-text">Quisque luctus, quam eget molestie com­modo, 
                                     lacus purus cursus purus, nec rutrum tellus dolor id lorem.
                                 </p>
                             </div>       
@@ -100,7 +116,7 @@
                             <div class="services-elem__wrapper">
                                 <h3 class="services-elem-title">Responsive Layout</h3>
                                 <p class="services-elem-text">Sed porttitor placerat rhoncus. In at nunc tellus.
-                                    Maecenas blandit nunc ligula. Prae&shy;sent elit leo.
+                                    Maecenas blandit nunc ligula. Prae­sent elit leo.
                                 </p>   
                             </div>    
                         </li>
@@ -109,7 +125,7 @@
                             <div class="services-elem__wrapper">
                                 <h3 class="services-elem-title">24 / 7 Support</h3>
                                 <p class="services-elem-text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi.
-                                    Nulla a sem erat. Pellen&shy;tesque egestas venenatis lorem .
+                                    Nulla a sem erat. Pellen­tesque egestas venenatis lorem .
                                 </p>   
                             </div>    
                         </li>
@@ -126,7 +142,7 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio anchor" id="Portfolio">
             <div class="container">
                 <div class="portfolio__inner">
                     <h2 class="portfolio-title">Portfolio</h2>
@@ -168,7 +184,7 @@
                             <img src="assets/images/projects/image-6.png" alt="Project image">
                         </li>
                         <li class="projects-item">
-                            <img src="assets/images/projects/image-7.png" alt="Project image">
+                            <img src="assets/images/projects/image-7.png" alt="Project imag">
                         </li>
                         <li class="projects-item">
                             <img src="assets/images/projects/image-8.png" alt="Project image">
@@ -189,7 +205,7 @@
                 </div>       
             </div>
         </section>
-        <section class="aboutUs">
+        <section class="aboutUs anchor" id="About">
             <div class="container">
                 <div class="aboutUs__inner">
                     <h2 class="aboutUs-title">About Us</h2>
@@ -211,16 +227,16 @@
                             <div class="socials">
                                 <ul class="socials-list">
                                     <li class="socials-item">
-                                        <a class="socials-link-facebook" href="#1"></a>        
+                                        <a class="socials-link-facebook" href="javascript:void(0)"></a>        
                                     </li>
                                     <li class="socials-item">
-                                        <a class="socials-link-google" href="#1"></a>                                              
+                                        <a class="socials-link-google" href="javascript:void(0)"></a>                                              
                                     </li>
                                     <li class="socials-item">
-                                        <a class="socials-link-twitter" href="#1"></a>                                               
+                                        <a class="socials-link-twitter" href="javascript:void(0)"></a>                                               
                                     </li>
                                     <li class="socials-item">
-                                        <a class="socials-link-linkedin" href="#1"></a>                                                                        
+                                        <a class="socials-link-linkedin" href="javascript:void(0)"></a>                                                                        
                                     </li>
                                 </ul>    
                             </div>
@@ -237,16 +253,16 @@
                             <div class="socials">
                                 <ul class="socials-list">
                                     <li class="socials-item">
-                                        <a class="socials-link-facebook" href="#1"></a>                                               
+                                        <a class="socials-link-facebook" href="javascript:void(0)"></a>                                               
                                     </li>
                                     <li class="socials-item">
-                                        <a class="socials-link-google" href="#1"></a>                                                
+                                        <a class="socials-link-google" href="javascript:void(0)"></a>                                                
                                     </li>
                                     <li class="socials-item">
-                                        <a class="socials-link-twitter" href="#1"></a>                                               
+                                        <a class="socials-link-twitter" href="javascript:void(0)"></a>                                               
                                     </li>
                                     <li class="socials-item">
-                                        <a class="socials-link-linkedin" href="#1"></a>                                                                             
+                                        <a class="socials-link-linkedin" href="javascript:void(0)"></a>                                                                             
                                     </li>
                                 </ul>    
                             </div>
@@ -263,16 +279,16 @@
                             <div class="socials">
                                 <ul class="socials-list_fix">
                                     <li class="socials-item">
-                                        <a class="socials-link-facebook" href="#1"></a>                                               
+                                        <a class="socials-link-facebook" href="javascript:void(0)"></a>                                               
                                     </li>
                                     <li class="socials-item">
-                                        <a class="socials-link-google" href="#1"></a>                                               
+                                        <a class="socials-link-google" href="javascript:void(0)"></a>                                               
                                     </li>
                                     <li class="socials-item">
-                                        <a class="socials-link-twitter" href="#1"></a>                                               
+                                        <a class="socials-link-twitter" href="javascript:void(0)"></a>                                               
                                     </li>
                                     <li class="socials-item">
-                                        <a class="socials-link-linkedin" href="#1"></a>                                                                              
+                                        <a class="socials-link-linkedin" href="javascript:void(0)"></a>                                                                              
                                     </li>
                                 </ul>    
                             </div>
@@ -281,7 +297,7 @@
                 </div>
             </div>    
         </section>
-        <section class="quote">
+        <section class="quote anchor" id="Contacts">
             <div class="container">
                 <div class="quote__inner">
                     <h2 class="quote-title">Get a Quote</h2>
@@ -290,17 +306,32 @@
                         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
                 </div>
                 <div class="quote__form">
-                    <form action="#" method="post" class="form">
-                        <input class="form__input" type="text" name="Name" placeholder="Name (Required)" required>
-                        <input class="form__input" type="email" name="Email" placeholder="Email (Required)" required>
-                        <input class="form__input" type="text" name="Subject" placeholder="Subject">
+                    <form action="" method="post" class="form">
+                        <input class="form__input name" type="text" name="Name" placeholder="Name (Required)" pattern="([A-Za-z\sА-Яа-яЁё0-9.])+" title="Username may consist only letters and spaces" required="">
+                        <input class="form__input email" type="email" name="Email" placeholder="Email (Required)" pattern="([A-Za-z0-9._-])+@([A-Za-z0-9-_])+\.([a-z]){2,3}" title="Email must be in format <username>@<domain>" required="">
+                        <input class="form__input subject" type="text" name="Subject" placeholder="Subject">
                         <textarea class="form__textarea" name="Description" placeholder="Describe your project in detail..."></textarea>
                         <button class="form__button" type="submit">Submit</button>
                     </form>
+                    <div class="popup disabled">
+                        <div class="popup__content">
+                            <div class="popup__header">
+                                <p>Письмо отправлено</p>
+                                <span class="popup_close">&times;</span>
+                            </div>
+                            <div class="popup__body">
+                                <p class="subject-result">Tema: </p>
+                                <p class="description-result">Описание: </p>
+                            </div>
+                            <div class="popup__footer">
+                                <button class="close-button">Ок</button>
+                            </div> 
+                        </div>
+                    </div>
                     <div class="contacts">
                         <div class="contacts__info">
                             <h3 class="contacts__info-title">Contact Information</h3>
-                            <p class="contacts__info-text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. 
+                            <p class="contacts__info-text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver­ra nibh. 
                                 Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. 
                                 Morbi at aliquet turpis, et consequat felis. </p>
                         </div>
@@ -329,21 +360,22 @@
                 <div class="footer__socials">
                     <ul class="footer__socials-list">
                         <li class="footer__socials-item">
-                            <a class="footer__socials-link-facebook" href="#1"></a>        
+                            <a class="footer__socials-link-facebook" href="javascript:void(0)"></a>        
                         </li>
                         <li class="footer__socials-item">
-                            <a class="footer__socials-link-google" href="#1"></a>                                              
+                            <a class="footer__socials-link-google" href="javascript:void(0)"></a>                                              
                         </li>
                         <li class="footer__socials-item">
-                            <a class="footer__socials-link-twitter" href="#1"></a>                                               
+                            <a class="footer__socials-link-twitter" href="javascript:void(0)"></a>                                               
                         </li>
                         <li class="footer__socials-item">
-                            <a class="footer__socials-link-linkedin" href="#1"></a>                                                                        
+                            <a class="footer__socials-link-linkedin" href="javascript:void(0)"></a>                                                                        
                         </li>
                     </ul>    
                 </div>
             </div>    
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
