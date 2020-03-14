@@ -6,9 +6,9 @@ for (let elem of navLink) {
 }
 function navColor() {
     for (let elem of navLink) {
-        elem.classList.remove("active");
+        elem.classList.remove("active-link");
     }
-    this.classList.toggle("active");
+    this.classList.toggle("active-link");
 }
 
 /* Switch active navigation link */
@@ -29,8 +29,8 @@ function activeNav() {
     let scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
     for (i in anchors) {
         if (anchors[i] <= scrollPosition) {
-            document.querySelector('.active').classList.remove("active");
-            document.querySelector('a[href*=' + i + ']').classList.add("active");
+            document.querySelector('.active-link').classList.remove("active-link");
+            document.querySelector('a[href*=' + i + ']').classList.add("active-link");
         }
     }
 }
@@ -63,26 +63,57 @@ function fixeNav() {
 
 /* Slides */
 
-let slideBackground = document.querySelector(".slider"),
-    slideFirst = document.querySelector(".slider__iphone-slide1"),
-    slideSecond = document.querySelector(".slider__iphone-slide2"),
-    sliderNext = document.querySelector(".slider-next"),
-    sliderPrev = document.querySelector(".slider-prev");
+let items = document.querySelectorAll('.slider-item'),
+    slideBackground = document.querySelector(".slider"),
+    currentItem = 0,
+    isEnabled = true;
 
-sliderNext.addEventListener("click", switchSlide);
-sliderPrev.addEventListener("click", switchSlide);
-
-function switchSlide() {
-    slideFirst.classList.toggle("disabled");
-    slideSecond.classList.toggle("disabled");
-    if (slideBackground.classList.contains("slider_red")) {
-        slideBackground.classList.remove("slider_red");
-        slideBackground.classList.add("slider_blue");   
-    } else if (slideBackground.classList.contains("slider_blue")) {
-        slideBackground.classList.remove("slider_blue");
-        slideBackground.classList.add("slider_red"); 
-    }      
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
 }
+
+function hideItem(direction) {
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('active-item', direction);
+	});
+}
+
+function showItem(direction) {
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+        this.classList.add('active-item');
+		isEnabled = true;
+	});
+}
+
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+    showItem('from-right');
+    slideBackground.classList.toggle("slider_blue");
+}
+
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+    showItem('from-left');
+    slideBackground.classList.toggle("slider_blue");
+}
+
+document.querySelector('.arrow.left').addEventListener('click', function() {
+	if (isEnabled) {
+		nextItem(currentItem);
+	}
+});
+
+document.querySelector('.arrow.right').addEventListener('click', function() {
+	if (isEnabled) {
+		previousItem(currentItem);
+	}
+});
 
 /* Screen activation */
 
