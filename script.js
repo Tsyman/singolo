@@ -181,23 +181,18 @@ function tabs() {
 
 /* Projects images */
 
-for (elem of projectsImages) {
-    elem.addEventListener("click", border);
-    elem.addEventListener("dblclick", borderOff);
-}
+for (let i = 0; i < projectsImages.length; i++) {
+    projectsImages[i].addEventListener('click', function (event) {
+        projectsImages.forEach(function (item) {
+            if (event.target !== item) {
+                item.classList.remove("bordered");
+            }
+        });
 
-function border() {
-    for (let elem of projectsImages) {
-        elem.classList.remove("bordered");
-    }
-    this.classList.toggle("bordered");
-}
-
-function borderOff(event) {
-    target = event.target;
-    if (target.classList.contains("bordered")) {
-        target.classList.remove("bordered");
-    }
+        if (event.target.classList.contains("bordered")) {
+            event.target.classList.remove("bordered");
+        } else event.target.classList.add("bordered");
+    });
 }
 
 /* Popup Message */
