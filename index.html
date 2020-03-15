@@ -307,8 +307,8 @@
                 </div>
                 <div class="quote__form">
                     <form action="" method="post" class="form">
-                        <input class="form__input name" type="text" name="Name" placeholder="Name (Required)" pattern="([A-Za-z\sА-Яа-яЁё0-9.])+" title="Username may consist only letters and spaces" required="">
-                        <input class="form__input email" type="email" name="Email" placeholder="Email (Required)" pattern="([A-Za-z0-9._-])+@([A-Za-z0-9-_])+\.([a-z]){2,3}" title="Email must be in format <username>@<domain>" required="">
+                        <input class="form__input name" type="text" name="Name" placeholder="Name (Required)" pattern="([A-Za-z\sА-Яа-яЁё0-9.])+" title="'Name' or 'Name Surname '" minlength="" maxlength="16" required>
+                        <input class="form__input email" type="email" name="Email" placeholder="Email (Required)" pattern="([A-Za-z0-9._-])+@([A-Za-z0-9-_])+\.([a-z]){2,3}" title="Username@domain" required>
                         <input class="form__input subject" type="text" name="Subject" placeholder="Subject">
                         <textarea class="form__textarea" name="Description" placeholder="Describe your project in detail..."></textarea>
                         <button class="form__button" type="submit">Submit</button>
