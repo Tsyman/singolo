@@ -186,6 +186,10 @@ a {
     right: 0px;
 }
 
+.arrow_color {
+    filter: hue-rotate(225deg);
+}
+
 .left:hover,
 .right:hover {
     cursor: pointer;

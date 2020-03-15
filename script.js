@@ -94,6 +94,8 @@ function nextItem(n) {
 	changeCurrentItem(n + 1);
     showItem('from-right');
     slideBackground.classList.toggle("slider_blue");
+    document.querySelector(".arrow.right").classList.toggle("arrow_color");
+    document.querySelector(".arrow.left").classList.toggle("arrow_color");
 }
 
 function previousItem(n) {
@@ -101,17 +103,19 @@ function previousItem(n) {
 	changeCurrentItem(n - 1);
     showItem('from-left');
     slideBackground.classList.toggle("slider_blue");
+    document.querySelector(".arrow.left").classList.toggle("arrow_color");
+    document.querySelector(".arrow.right").classList.toggle("arrow_color");
 }
 
 document.querySelector('.arrow.left').addEventListener('click', function() {
 	if (isEnabled) {
-		nextItem(currentItem);
+        nextItem(currentItem);
 	}
 });
 
 document.querySelector('.arrow.right').addEventListener('click', function() {
 	if (isEnabled) {
-		previousItem(currentItem);
+        previousItem(currentItem);
 	}
 });
 
