@@ -168,15 +168,15 @@ function tabs() {
     }
     this.classList.toggle("portfolio__navigation-button_active");
 
-    for (let elem of projectsImages) {
-        elem.classList.remove("bordered");
-    }
-
     let randNumb = shuffle([1,2,3,4,5,6,7,8,9,10,11,12]);
     let length = randNumb.length;
     for (let i = 0; i < length; i++) {  
         projectsImages[i].src = `assets/images/projects/image-${randNumb[i]}.png`;          
-    }         
+    }
+
+    for (let elem of projectsImages) {
+        elem.classList.remove("image-border_visible");
+    }            
 }
 
 /* Projects images */
@@ -185,13 +185,13 @@ for (let i = 0; i < projectsImages.length; i++) {
     projectsImages[i].addEventListener('click', function (event) {
         projectsImages.forEach(function (item) {
             if (event.target !== item) {
-                item.classList.remove("bordered");
+                item.classList.remove("image-border_visible");
             }
         });
 
-        if (event.target.classList.contains("bordered")) {
-            event.target.classList.remove("bordered");
-        } else event.target.classList.add("bordered");
+        if (event.target.classList.contains("image-border_visible")) {
+            event.target.classList.remove("image-border_visible");
+        } else event.target.classList.add("image-border_visible");
     });
 }
 

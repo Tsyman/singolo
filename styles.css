@@ -472,7 +472,7 @@ a {
 
 .portfolio__inner {
     padding-top: 70px;
-    margin-bottom: 19px;
+    margin-bottom: 15px;
 }
 
 .portfolio-title {
@@ -545,10 +545,11 @@ a {
 /* Portfolio projects */
 
 .projects {
-    height: 611px;
+    height: 610px;
+    width: 950px;
     overflow: hidden;
-    margin-bottom: 57px;
-    margin-right: -15px;
+    margin-bottom: 62px;
+    margin-left: -5px;
 }
 
 .projects-list {
@@ -557,13 +558,18 @@ a {
 }
 
 .projects-item {
-    margin-right: 15px;
-    margin-bottom: 17px;
-    width: 225px;
-    height: 190px;
+    margin-right: 20px;
+    margin-bottom: 19px;
+    width: 220px;
+    height: 187px;
 }
 
-.bordered {
+.image-border_invisible {
+    border: 5px solid transparent;
+    
+}
+
+.image-border_visible {
     border: 5px solid #F06C64;
 }
 
