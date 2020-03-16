@@ -212,8 +212,8 @@ closeButton.addEventListener("click", closePopup);
 form.addEventListener('submit',  function(event) {
     event.preventDefault();
     if (form.checkValidity()) {
-        popupSubjectResult.innerHTML = (inputSubject.value) ?  "Тема: " + inputSubject.value : "Без темы";
-        popupDescriptionResult.innerHTML = (textarea.value) ? "Описание: " + textarea.value : "Без описания";
+        popupSubjectResult.textContent = (inputSubject.value) ?  "Тема: " + inputSubject.value : "Без темы";
+        popupDescriptionResult.textContent = (textarea.value) ? "Описание: " + textarea.value : "Без описания";
         popup.classList.remove("disabled");
     }
     form.reset();
