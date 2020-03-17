@@ -4,11 +4,11 @@ let navLink = document.querySelectorAll(".navigation-link");
 for (let elem of navLink) {
     elem.addEventListener("click", navColor);
 }
-function navColor() {
+function navColor(event) {
     for (let elem of navLink) {
         elem.classList.remove("active-link");
     }
-    this.classList.toggle("active-link");
+    event.target.classList.toggle("active-link");
 }
 
 /* Switch active navigation link */
@@ -17,8 +17,8 @@ let anchor = document.querySelectorAll(".anchor"),
     anchors = {},
     i = 0;
     
-Array.prototype.forEach.call(anchor, function(e) {
-    anchors[e.id] = e.offsetTop - 200;
+Array.prototype.forEach.call(anchor, function(event) {
+    anchors[event.id] = event.offsetTop - 200;
 });
     
 anchors.Contacts = 2400;
@@ -75,16 +75,16 @@ function changeCurrentItem(n) {
 function hideItem(direction) {
 	isEnabled = false;
 	items[currentItem].classList.add(direction);
-	items[currentItem].addEventListener('animationend', function() {
-        this.classList.remove('active-item', direction);
+	items[currentItem].addEventListener('animationend', function(event) {
+        event.target.classList.remove('active-item', direction);
 	});
 }
 
 function showItem(direction) {
 	items[currentItem].classList.add('next', direction);
-	items[currentItem].addEventListener('animationend', function() {
-		this.classList.remove('next', direction);
-        this.classList.add('active-item');
+	items[currentItem].addEventListener('animationend', function(event) {
+		event.target.classList.remove('next', direction);
+        event.target.classList.add('active-item');
 		isEnabled = true;
 	});
 }
@@ -130,12 +130,12 @@ for (let elem of homeButtons) {
     elem.addEventListener("click", screenOff);
 }
 
-function screenOff() {
-    if (this.alt == "Home1") {
+function screenOff(event) {
+    if (event.target.alt == "Home1") {
         firstScreen.classList.toggle("disabled");       
-    } else if (this.alt == "Home2") {
+    } else if (event.target.alt == "Home2") {
         secondScreen.classList.toggle("disabled");  
-    } else if (this.alt == "Home3") {
+    } else if (event.target.alt == "Home3") {
         thirdScreen.classList.toggle("disabled");  
     }   
 }
@@ -143,45 +143,30 @@ function screenOff() {
 /* Portfolio Tabs */
 
 let portfolioLink = document.querySelectorAll(".portfolio__navigation-button"),
-    projectsImages = document.querySelectorAll(".projects-item img");
+    projectsList = document.querySelector(".projects-list").children;
+    projectsListArray = Array.prototype.slice.call(projectsList);
 
 for (let elem of portfolioLink) {
-    elem.addEventListener("click", tabs);
-}
+    elem.addEventListener("click", (event) => {
+        projectsListArray.sort(function() {return Math.random() - .5; });
+        projectsListArray.forEach( elem => document.querySelector(".projects-list").append(elem));
 
-function shuffle(array) {
-    let i = array.length,
-        j = 0,
-        temp;
-    while (i--) {
-        j = Math.floor(Math.random() * (i+1));
-        temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-    return array;
-}
-        
-function tabs() {
-    for (let elem of portfolioLink) {
-        elem.classList.remove("portfolio__navigation-button_active");
-        elem.disabled = false;
-    }
-    this.classList.toggle("portfolio__navigation-button_active");
-    this.disabled = true;
+        for (let elem of portfolioLink) {
+            elem.classList.remove("portfolio__navigation-button_active");
+            elem.disabled = false;
+        }
+        event.target.classList.toggle("portfolio__navigation-button_active");
+        event.target.disabled = true;
 
-    let randNumb = shuffle([1,2,3,4,5,6,7,8,9,10,11,12]);
-    let length = randNumb.length;
-    for (let i = 0; i < length; i++) {  
-        projectsImages[i].src = `assets/images/projects/image-${randNumb[i]}.png`;          
-    }
-
-    for (let elem of projectsImages) {
-        elem.classList.remove("image-border_visible");
-    }            
+        for (let elem of projectsImages) {
+            elem.classList.remove("image-border_visible");
+        } 
+    });
 }
 
 /* Projects images */
+
+projectsImages = document.querySelectorAll(".projects-item img");
 
 for (let i = 0; i < projectsImages.length; i++) {
     projectsImages[i].addEventListener('click', function (event) {
