@@ -165,8 +165,10 @@ function shuffle(array) {
 function tabs() {
     for (let elem of portfolioLink) {
         elem.classList.remove("portfolio__navigation-button_active");
+        elem.disabled = false;
     }
     this.classList.toggle("portfolio__navigation-button_active");
+    this.disabled = true;
 
     let randNumb = shuffle([1,2,3,4,5,6,7,8,9,10,11,12]);
     let length = randNumb.length;
