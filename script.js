@@ -33,7 +33,12 @@ function activeNav() {
             document.querySelector('a[href*=' + i + ']').classList.add("active-link");
         }
     }
+    if (document.body.clientHeight + document.body.scrollTop === document.body.scrollHeight) {
+        document.querySelector('.active-link').classList.remove("active-link");
+        document.querySelector('a[href*="Contacts"]').classList.add("active-link");
+    }
 }
+
       
 /* Smooth anchors */
 
