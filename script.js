@@ -56,14 +56,13 @@ for (let elem of navLink) {
 /* Fixed Navigation */
 
 window.onscroll = function() {fixeNav()};
-let navigation = document.querySelector("nav"),
-    sticky = navigation.offsetTop;
+let headerHeight = document.querySelector("header").offsetHeight;
 
 function fixeNav() {
-    if (window.pageYOffset >= sticky) {
-        navigation.classList.add("navigation_sticky")
+    if (window.pageYOffset >= headerHeight) {
+        document.querySelector("header").classList.add("header-sticky", "header-opacity"); 
     } else 
-        navigation.classList.remove("navigation_sticky");
+        document.querySelector("header").classList.remove("header-sticky", "header-opacity");
 }
 
 /* Slides */
