@@ -7,8 +7,16 @@
 <body>
     <header class="header">
         <div class="container header__container">
+            <div class="hamburger">
+                <span class="hamburger__line"></span>
+            </div>
+            <div class="navigation-modal">
+                <div class="navigation-modal__content">
+                    <nav class="navigation-mobile"></nav>
+                </div>
+            </div>
             <h1 class="logo">
-                <a href="javascript:void(0)"><span>Singolo</span><span class="logo-star">*</span></a>
+                <a href="#Home"><span>Singolo</span><span class="logo-star">*</span></a>
             </h1>
             <nav class="header__navigation">
                 <ul class="navigation-list">
@@ -43,33 +51,27 @@
     </header>
     <main class="main anchor" id="Home">
         <section class="slider slider_red">  
-            <div class="container">
-                <div class="arrow__inner">
-                    <img class="arrow left" src="./assets/images/slider/prev.png" alt="Previous slide">
-                    <img class="arrow right" src="./assets/images/slider/next.png" alt="Next slide">
-                </div>
+            <div class="container slider__container">
+                <img class="arrow left" src="./assets/images/slider/prev.png" alt="Previous slide">
                 <div class="slider-item active-item">
-                    <div class="slider__iphone-slide1">
-                        <img src="./assets/images/slider/slide1/Cam.png" class="iphone-slide1-cam_first" alt="Cam">
-                        <img src="./assets/images/slider/slide1/Screen1.png" class="iphone-slide1-screen_first" alt="Screen">
-                        <img src="./assets/images/slider/slide1/Shadow.png" class="iphone-slide1-shadow_first" alt="Shadow">
-                        <img src="./assets/images/slider/slide1/Home.png" class="home iphone-slide1-home_first" alt="Home1">
-                        <img src="./assets/images/slider/slide1/Cam.png" class="iphone-slide1-cam-second" alt="Cam">
-                        <img src="./assets/images/slider/slide1/Screen2.png" class="iphone-slide1-screen_second" alt="Screen">                                      
-                        <img src="./assets/images/slider/slide1/Shadow.png" class="iphone-slide1-shadow_second" alt="Shadow">
-                        <img src="./assets/images/slider/slide1/Home.png" class="home iphone-slide1-home_second" alt="Home2">
-                    </div>
+                    <img src="./assets/images/slider/slide1/Cam.png" class="iphone-slide1-cam_first" alt="Cam">
+                    <img src="./assets/images/slider/slide1/Screen1.png" class="iphone-slide1-screen_first" alt="Screen">
+                    <img src="./assets/images/slider/slide1/Shadow.png" class="iphone-slide1-shadow_first" alt="Shadow">
+                    <img src="./assets/images/slider/slide1/Home.png" class="home iphone-slide1-home_first" alt="Home1">
+                    <img src="./assets/images/slider/slide1/Cam.png" class="iphone-slide1-cam-second" alt="Cam">
+                    <img src="./assets/images/slider/slide1/Screen2.png" class="iphone-slide1-screen_second" alt="Screen">                                      
+                    <img src="./assets/images/slider/slide1/Shadow.png" class="iphone-slide1-shadow_second" alt="Shadow">
+                    <img src="./assets/images/slider/slide1/Home.png" class="home iphone-slide1-home_second" alt="Home2">
                 </div>
                 <div class="slider-item">
-                    <div class="slider__iphone-slide2">
-                        <img src="./assets/images/slider/slide2/Cam.png" class="iphone-slide2-cam" alt="Cam">
-                        <img src="./assets/images/slider/slide2/Screen3.png" class="iphone-slide2-screen" alt="Screen">
-                        <img src="./assets/images/slider/slide2/Shadow.png" class="iphone-slide2-shadow" alt="Shadow">
-                        <img src="./assets/images/slider/slide2/Home.png" class="home iphone-slide2-home" alt="Home3">
-                        <img src="./assets/images/slider/slide2/Phone.png" class="iphone-slide2-phone_first" alt="Phone">
-                        <img src="./assets/images/slider/slide2/Phone.png" class="iphone-slide2-phone_second" alt="Phone">                                      
-                    </div>
+                    <img src="./assets/images/slider/slide2/Cam.png" class="iphone-slide2-cam" alt="Cam">
+                    <img src="./assets/images/slider/slide2/Screen3.png" class="iphone-slide2-screen" alt="Screen">
+                    <img src="./assets/images/slider/slide2/Shadow.png" class="iphone-slide2-shadow" alt="Shadow">
+                    <img src="./assets/images/slider/slide2/Home.png" class="home iphone-slide2-home" alt="Home3">
+                    <img src="./assets/images/slider/slide2/Phone.png" class="iphone-slide2-phone_first" alt="Phone">
+                    <img src="./assets/images/slider/slide2/Phone.png" class="iphone-slide2-phone_second" alt="Phone">                                      
                 </div>
+                <img class="arrow right" src="./assets/images/slider/next.png" alt="Next slide">
             </div>       
         </section>
         <section class="services anchor" id="Services">
@@ -214,8 +216,8 @@
                 <div class="participants">
                     <ul class="participants-list">
                         <li class="participants-item">
-                            <div class="photo">
-                                <img src="assets/images/aboutUs/photo-1.png" alt="Adam Jensen">
+                            <div>
+                                <img class="photo" src="assets/images/aboutUs/photo-1.png" alt="Adam Jensen">
                             </div>
                             <div class="info">
                                 <h3 class="info-title">Adam Jensen</h3>
@@ -240,8 +242,8 @@
                             </div>
                         </li>
                         <li class="participants-item">
-                            <div class="photo">
-                                <img src="assets/images/aboutUs/photo-2.png" alt="Desmond Miles">
+                            <div>
+                                <img class="photo" src="assets/images/aboutUs/photo-2.png" alt="Desmond Miles">
                             </div>
                             <div class="info">
                                 <h3 class="info-title">Desmond Miles</h3>
@@ -266,8 +268,8 @@
                             </div>
                         </li>
                         <li class="participants-item">
-                            <div class="photo">
-                                <img src="assets/images/aboutUs/photo-3.png" alt="Desmond Miles">
+                            <div>
+                                <img class="photo"src="assets/images/aboutUs/photo-3.png" alt="Desmond Miles">
                             </div>
                             <div class="info">
                                 <h3 class="info-title">Scolara Visari</h3>
@@ -295,7 +297,7 @@
                 </div>
             </div>    
         </section>
-        <section class="quote anchor" id="Contacts">
+        <section class="quote">
             <div class="container">
                 <div class="quote__inner">
                     <h2 class="quote-title">Get a Quote</h2>
@@ -349,7 +351,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="Contacts">
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__copyright">
