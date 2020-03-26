@@ -105,8 +105,8 @@ a {
 
 @media screen and (max-width: 767px) {
     .header {
-        padding-top: 18px;
-        padding-bottom: 18px;
+        padding-top: 22px;
+        padding-bottom: 16px;
     }
 }
 
@@ -137,6 +137,12 @@ a {
 
 .logo-mobile {
     margin-left: 28px;
+}
+
+@media screen and (max-width: 767px) {
+    .logo {
+        font-size: 22px;
+    }
 }
 
 /* Navigation */ 
@@ -332,9 +338,16 @@ a {
 
 @media screen and (max-width: 1019px) {
     .slider__container {
-        height: 56vw;
+        height: 58vw;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .slider__container {
+        height: 51vw;
+    }
+}
+
 
 /* Arrows */
 
@@ -633,21 +646,33 @@ a {
 }
 
 @media screen and (max-width: 1019px) {
+    .services__inner {
+        padding-top: 41px;
+        margin-bottom: 44px;
+    }
     .services-elem {
-    width: 46%;
-    margin-bottom: 5.7%;
+    width: 49%;
+    margin-bottom: 56px;
+    }
+    .services-text {
+        margin-bottom: 39px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .services-elem {
     width: 100%;
+    margin-bottom: 32px;
     }
     .services__inner {
         padding-top: 25px;
+        margin-bottom: -2.6%;
     }
     .services-text {
-        margin-bottom: 25px;
+        margin-bottom: 60px;
+    }
+    .services-elem:nth-last-child(-n+3) {
+        margin-bottom: 9.7%;
     }
 }
 
@@ -672,7 +697,7 @@ a {
 
 .portfolio-text {
     font-size: 18px;
-    margin-top: 26px;
+    margin-top: 30px;
     font-weight: 300;
     line-height: 28px;
     margin-bottom: 13px;
@@ -731,6 +756,16 @@ a {
     outline: none;
 }
 
+@media screen and (max-width: 1019px) {
+    .portfolio__inner {
+        padding-top: 67px;
+        margin-bottom: 22px;
+    }
+    .portfolio-text {
+        margin-bottom: 46px;
+    }
+}
+
 @media screen and (max-width: 330px) {
     .portfolio__navigation {
         flex-wrap: wrap;
@@ -739,7 +774,11 @@ a {
 
 @media screen and (max-width: 767px) {
     .portfolio__inner {
-        padding-top: 42px;
+        padding-top: 50px;
+    }
+    .portfolio-text {
+        margin-bottom: 21px;
+        margin-top: 30px;
     }
 }
 
@@ -748,7 +787,7 @@ a {
 
 .projects {
     overflow: hidden;
-    margin-bottom: 61px;
+    margin-bottom: 57px;
 }
 
 .projects-list {
@@ -780,6 +819,9 @@ a {
 }
 
 @media screen and (max-width: 1019px) {
+    .projects {
+        margin-bottom: 61px;
+    }
     .projects-item {
     width: calc(33% - 5px);
     margin-bottom: 10px;
@@ -788,7 +830,7 @@ a {
 
 @media screen and (max-width: 767px) {
     .projects {
-        margin-bottom: 15px;
+        margin-bottom: 16px;
     }
     .projects-item {
     width: calc(50% - 5px);
@@ -827,14 +869,15 @@ a {
 
 @media screen and (max-width: 1019px) {
     .aboutUs__inner {
-        padding-top: 52px;
-        margin-bottom: 28px;
+        padding-top: 60px;
+        margin-bottom: 40px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .aboutUs__inner {
-        padding-top: 35px;
+        padding-top: 42px;
+        margin-bottom: 54px;
     }
 }
 
@@ -901,9 +944,19 @@ a {
     letter-spacing: -0.07px;
 }
 
+@media screen and (max-width: 1019px) {
+    .participants {
+        margin-bottom: 69px;
+    }
+    .info {
+        margin-top: 5px;
+        margin-bottom: 0px;
+    } 
+}
+
 @media screen and (max-width: 767px) {
     .participants {
-        margin-bottom: 35px;
+        margin-bottom: 32px;
     }
     .participants-list {
     justify-content: center;
@@ -913,7 +966,7 @@ a {
 
 @media screen and (max-width: 767px) {
     .participants-item:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 27px;
     }
 }
 
@@ -925,7 +978,6 @@ a {
     }
     .info {
         margin-top: 18px;
-        margin-bottom: 9px;
     } 
 }
 
@@ -1036,7 +1088,7 @@ a {
 }
 
 .quote__inner {
-    padding-top: 69px;
+    padding-top: 68px;
 }
 
 .quote-title {
@@ -1061,10 +1113,20 @@ a {
     line-height: 33px;
 }
 
+
+@media screen and (max-width: 1019px) {
+    .quote__inner {
+        padding-top: 62px;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .quote__inner {
-        padding-top: 44px;
-}
+        padding-top: 53px;
+    }
+    .quote-text {
+        margin-top: 30px;
+    }
 }
 
 
@@ -1074,14 +1136,13 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 64%;
+    width: 66%;
 }
 
 .quote__form {
-    margin-top: 43px;
+    margin-top: 44px;
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
 }
 
 .form__input,
@@ -1163,17 +1224,42 @@ textarea::-ms-input-placeholder {
     color: #f48c8f;
 }
 
+@media screen and (max-width: 1019px) {
+    .quote__form {
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+    .form {
+        width: 64%;
+    }
+    .form__textarea {
+        height: 155px;
+        padding: 5px 9px;
+    }
+    .form__input, 
+    .form__textarea, 
+    .form__button {
+        margin-bottom: 15px;
+        padding-left: 9px;
+    } 
+}
+
 @media screen and (max-width: 767px) {
     .quote__form {
     flex-direction: column;
     margin-bottom: 30px;
-    margin-top: 0px;
+    margin-top: 50px;
     }
-}
-
-@media screen and (max-width: 767px) {
-    .form, .contacts {
-    width: 100%;
+    .form__textarea {
+        height: 160px;
+    }
+    .form__button {
+        height: 50px;
+    }
+    .form__input, 
+    .form__textarea, 
+    .form__button {
+        margin-bottom: 13px;
     } 
 }
 
@@ -1236,9 +1322,9 @@ textarea::-ms-input-placeholder {
 @media screen and (max-width: 767px) {
     .form, .contacts {
         width: 100%;
+        margin-bottom: 6px;
     }
 }
-
 
 @media screen and (max-width: 767px) {
     .contacts {
