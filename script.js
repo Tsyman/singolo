@@ -302,8 +302,6 @@ form.addEventListener('submit',  function(event) {
         popupDescriptionResult.textContent = (textarea.value) ? "Описание: " + textarea.value : "Без описания";
         popup.classList.remove("disabled");
     }
-    form.reset();
-    return false;
 });
 
 function closePopup() {
@@ -316,7 +314,6 @@ function closePopup() {
 let hamburger = document.querySelector(".hamburger");
     navigationModal = document.querySelector(".navigation-modal");
     navigationMobile = document.querySelector(".navigation-mobile");
-    navigationMobileItem = navigationMobile.querySelectorAll(".navigation-item");
     headerContainer= document.querySelector(".header__container");
     navigationListMobile = document.querySelector(".navigation-list").cloneNode(true);
     navigationMobile.append(navigationListMobile);
@@ -336,7 +333,8 @@ function navigationMobileOpen() {
 }
 
 function navigationMobileClose(event) {
-    if (event.target == document.querySelector(".navigation-modal__content") || navigationMobileItem) {
+    console.log(event.target)
+    if (event.target == document.querySelector(".navigation-modal__content") || event.target.classList.contains("navigation-link")) {
         hamburger.classList.toggle("hamburger_open");
         navigationModal.classList.toggle("navigation-modal_open");
         headerContainer.classList.toggle("header__container-mobile");
