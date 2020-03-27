@@ -14,32 +14,34 @@ function navColor(event) {
 /* Switch active navigation link */
 
 let anchor = document.querySelectorAll(".anchor"),
+    navigationDesktop = document.querySelector(".header__navigation"),
     anchors = {},
     i = 0;
     
 Array.prototype.forEach.call(anchor, function(event) {
-    anchors[event.id] = event.offsetTop - 200;
+    anchors[event.id] = event.offsetTop - 80;
 });
-    
-anchors.Contacts = 2400;
 
 window.addEventListener("scroll", activeNav);
 
 function activeNav() {
-    let scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+    let scrollPosition = window.pageYOffset;
     for (i in anchors) {
         if (anchors[i] <= scrollPosition) {
             document.querySelector('.active-link').classList.remove("active-link");
+            navigationDesktop.querySelector('.active-link').classList.remove("active-link");
             document.querySelector('a[href*=' + i + ']').classList.add("active-link");
+            navigationDesktop.querySelector('a[href*=' + i + ']').classList.add("active-link");
         }
     }
-    if (document.body.clientHeight + document.body.scrollTop === document.body.scrollHeight) {
+    if (window.pageYOffset >= document.documentElement.offsetHeight - innerHeight) {
         document.querySelector('.active-link').classList.remove("active-link");
+        navigationDesktop.querySelector('.active-link').classList.remove("active-link");
         document.querySelector('a[href*="Contacts"]').classList.add("active-link");
+        navigationDesktop.querySelector('a[href*="Contacts"]').classList.add("active-link");
     }
 }
-
-      
+    
 /* Smooth anchors */
 
 for (let elem of navLink) {
@@ -123,6 +125,97 @@ document.querySelector('.arrow.right').addEventListener('click', function() {
 	}
 });
 
+/* Swiper for mobiles */ 
+
+const swipedetect = (el) => {
+  
+	let surface = el;
+	let startX = 0;
+	let startY = 0;
+	let distX = 0;
+	let distY = 0;
+	let startTime = 0;
+	let elapsedTime = 0;
+
+	let threshold = 150;
+	let restraint = 100;
+	let allowedTime = 300;
+
+	surface.addEventListener('mousedown', function(e){
+		startX = e.pageX;
+		startY = e.pageY;
+		startTime = new Date().getTime();
+		e.preventDefault();
+	}, false);
+
+	surface.addEventListener('mouseup', function(e){
+		distX = e.pageX - startX;
+		distY = e.pageY - startY;
+		elapsedTime = new Date().getTime() - startTime;
+		if (elapsedTime <= allowedTime){
+			if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
+				if ((distX > 0)) {
+					if (isEnabled) {
+						previousItem(currentItem);
+					}
+				} else {
+					if (isEnabled) {
+						nextItem(currentItem);
+					}
+				}
+			}
+		}
+		e.preventDefault();
+	}, false);
+
+	surface.addEventListener('touchstart', function(e){
+		if (e.target.classList.contains('arrow')) {
+			if (e.target.classList.contains('left')) {
+				if (isEnabled) {
+					previousItem(currentItem);
+				}
+			} else {
+				if (isEnabled) {
+					nextItem(currentItem);
+				}
+			}
+		}
+			var touchobj = e.changedTouches[0];
+			startX = touchobj.pageX;
+			startY = touchobj.pageY;
+			startTime = new Date().getTime();
+			e.preventDefault();
+	}, false);
+
+	surface.addEventListener('touchmove', function(e){
+			e.preventDefault();
+	}, false);
+
+	surface.addEventListener('touchend', function(e){
+			var touchobj = e.changedTouches[0];
+			distX = touchobj.pageX - startX;
+			distY = touchobj.pageY - startY;
+			elapsedTime = new Date().getTime() - startTime;
+			if (elapsedTime <= allowedTime){
+					if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
+							if ((distX > 0)) {
+								if (isEnabled) {
+									previousItem(currentItem);
+								}
+							} else {
+								if (isEnabled) {
+									nextItem(currentItem);
+								}
+							}
+					}
+			}
+			e.preventDefault();
+	}, false);
+}
+
+var el = document.querySelector('.slider__container');
+swipedetect(el);
+
 /* Screen activation */
 
 let firstScreen = document.querySelector(".iphone-slide1-screen_first"),
@@ -132,6 +225,7 @@ let firstScreen = document.querySelector(".iphone-slide1-screen_first"),
 
 for (let elem of homeButtons) {
     elem.addEventListener("click", screenOff);
+    elem.addEventListener("touchstart", screenOff);
 }
 
 function screenOff(event) {
@@ -207,8 +301,6 @@ form.addEventListener('submit',  function(event) {
         popupDescriptionResult.textContent = (textarea.value) ? "Описание: " + textarea.value : "Без описания";
         popup.classList.remove("disabled");
     }
-    form.reset();
-    return false;
 });
 
 function closePopup() {
@@ -216,8 +308,34 @@ function closePopup() {
     popup.classList.add("disabled");
 }
 
+/* Mobile navigation */
+
+let hamburger = document.querySelector(".hamburger");
+    navigationModal = document.querySelector(".navigation-modal");
+    navigationMobile = document.querySelector(".navigation-mobile");
+    headerContainer= document.querySelector(".header__container");
+    navigationListMobile = document.querySelector(".navigation-list").cloneNode(true);
+    navigationMobile.append(navigationListMobile);
+    navigationListMobile.classList.remove("navigation-list");
+    navigationListMobile.classList.add("navigation-list-mobile");
+    logo = document.querySelector(".logo");
 
 
+hamburger.addEventListener("click", navigationMobileOpen);
+navigationModal.addEventListener("click", navigationMobileClose);
 
-    
-    
+function navigationMobileOpen() {
+    hamburger.classList.toggle("hamburger_open");
+    navigationModal.classList.toggle("navigation-modal_open");
+    headerContainer.classList.toggle("header__container-mobile");
+    logo.classList.toggle("logo-mobile");
+}
+
+function navigationMobileClose(event) {
+    if (event.target == document.querySelector(".navigation-modal__content") || event.target.classList.contains("navigation-link")) {
+        hamburger.classList.toggle("hamburger_open");
+        navigationModal.classList.toggle("navigation-modal_open");
+        headerContainer.classList.toggle("header__container-mobile");
+        logo.classList.toggle("logo-mobile");
+    }
+}   
