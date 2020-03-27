@@ -41,8 +41,7 @@ function activeNav() {
         navigationDesktop.querySelector('a[href*="Contacts"]').classList.add("active-link");
     }
 }
-
-      
+    
 /* Smooth anchors */
 
 for (let elem of navLink) {
@@ -333,7 +332,6 @@ function navigationMobileOpen() {
 }
 
 function navigationMobileClose(event) {
-    console.log(event.target)
     if (event.target == document.querySelector(".navigation-modal__content") || event.target.classList.contains("navigation-link")) {
         hamburger.classList.toggle("hamburger_open");
         navigationModal.classList.toggle("navigation-modal_open");
