@@ -902,19 +902,18 @@ a {
 
 .projects {
     overflow: hidden;
-    padding-bottom: 61px;
+    padding-bottom: 60px;
 }
 
 .projects-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-right: 5px;
 }
 
 .projects-item {
     width: calc(25% - 19px);
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 }
 
 .image-border_invisible {
@@ -928,7 +927,7 @@ a {
 }
 
 .projects-item:nth-child(4n) {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .projects-item:nth-last-child(-n+4) {
@@ -937,31 +936,46 @@ a {
 
 @media screen and (max-width: 1019px) {
     .projects {
-        padding-bottom: 60px;
+        padding-bottom: 63px;
     }
     .projects-item {
-        width: calc(33% - 10px);
-        margin-bottom: 7px;
+        width: calc(33% - 15px);
+        margin-bottom: 10px;
+    }
+    .projects-item:nth-child(4n) {
+        margin-right: 0px;
     }
     .projects-item:nth-child(3n) {
-        margin-right: 5px;
+        margin-right: 10px;
+    }
+    .projects-item:nth-last-child(-n+3) {
+        margin-bottom: 0px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .projects {
-        margin-bottom: 23px;
+        margin-bottom: 32px;
         padding: 0;
     }
     .projects-item {
-        width: calc(50% - 10px);
-        margin-bottom: 6px;
+        width: calc(50% - 16px);
+        margin-bottom: 4px;
     }
     .projects-item:nth-child(1n + 9) {
         display: none;
     }
     .projects-item:nth-child(2n) {
-        margin-right: 5px;
+        margin-right: 14px;
+    }
+    .projects-item:nth-last-child(-n+6) {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-border_invisible {
+        width: 103%;
     }
 }
 
@@ -1063,7 +1077,7 @@ a {
 
 @media screen and (max-width: 1019px) {
     .participants {
-        padding-bottom: 70px;
+        padding-bottom: 71px;
     }
     .participants-list {
         margin-left: 1px;
