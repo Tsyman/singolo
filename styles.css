@@ -959,18 +959,23 @@ a {
         padding: 0;
     }
     .projects-item {
-        width: calc(50% - 14px);
-        margin-bottom: 5px;
+        width: calc(50% - 16px);
+        margin-bottom: 4px;
     }
     .projects-item:nth-child(1n + 9) {
         display: none;
     }
     .projects-item:nth-child(2n) {
-        margin-right: 10px;
-        width: 46%;
+        margin-right: 14px;
     }
     .projects-item:nth-last-child(-n+6) {
         margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-border_invisible {
+        width: 103%;
     }
 }
 
