@@ -329,6 +329,7 @@ function navigationMobileOpen() {
     navigationModal.classList.toggle("navigation-modal_open");
     headerContainer.classList.toggle("header__container-mobile");
     logo.classList.toggle("logo-mobile");
+    logo.classList.toggle("logo-fix");
 }
 
 function navigationMobileClose(event) {
@@ -337,5 +338,6 @@ function navigationMobileClose(event) {
         navigationModal.classList.toggle("navigation-modal_open");
         headerContainer.classList.toggle("header__container-mobile");
         logo.classList.toggle("logo-mobile");
+        logo.classList.toggle("logo-fix");
     }
 }   

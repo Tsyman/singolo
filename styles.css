@@ -104,7 +104,7 @@ a {
 @media screen and (max-width: 767px) {
     .header {
         padding-top: 23px;
-        padding-bottom: 17px;
+        padding-bottom: 14px;
     }
     .header__container {
         justify-content: center;
@@ -136,7 +136,13 @@ a {
 
 @media screen and (max-width: 767px) {
     .logo {
-        font-size: 21px;
+        font-size: 18.6875px;
+        line-height: 28px;
+        margin-left: 11px;
+        letter-spacing: 0.02em;
+    }
+    .logo-fix {
+        margin-left: 40px;
     }
 }
 
@@ -190,6 +196,9 @@ a {
 @media screen and (max-width: 767px) {
     .header__navigation {
         display: none;
+    }
+    .navigation-link {
+        letter-spacing: -1px;
     }
 }
 
